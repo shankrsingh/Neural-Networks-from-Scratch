@@ -32,7 +32,7 @@ def softmax(A):
 def forward_prop(X,w1,b1,w2,b2):
 	Z=X.dot(w1)+b1
 	A=sigmoid(Z)
-	Y=softmax(A)
+	Y=softmax(A.dot(w2)+b2)
 	return Y
 
 def classification_rate(orig,predicted):
